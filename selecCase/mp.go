@@ -8,6 +8,11 @@ import (
 // When a routine is communicating with several channels
 // is very useful to use select in order to interact in an ordered way with all of the messages that are getting received
 
+// Select\
+// The select statement lets a goroutine wait on multiple communication operations.
+// A select blocks until one of its cases can run, then it executes that case. It chooses one at random if multiple are ready.
+// https://go.dev/tour/concurrency/5
+
 func doSomething(i time.Duration, c chan<- int, param int) {
 	time.Sleep(i)
 	c <- param
